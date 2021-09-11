@@ -20,7 +20,7 @@ The last generate code from this project can be imported as a dependency in grad
    }
 
    dependencies {
-        implementation 'com.github.jviniciusb:proto-hello-grpc:main-SNAPSHOT'
+        implementation 'com.github.jviniciusb:proto-hello-grpc:1.0.0'
    }
 
 ```
