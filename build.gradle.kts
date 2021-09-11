@@ -69,3 +69,14 @@ sourceSets {
 tasks.withType<Jar> {
     archiveBaseName.set("proto-hello-grpc")
 }
+
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = project.group.toString()
+            artifactId = project.name
+            version = project.version.toString()
+        }
+    }
+}
