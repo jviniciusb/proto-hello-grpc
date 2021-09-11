@@ -1,0 +1,15 @@
+version: 2.1
+
+jobs:
+  build:
+    working_directory: ~/code
+    docker:
+      - image: bufbuild/buf
+    resource_class: small
+    steps:
+      - checkout
+      - run:
+          name: run buf checks
+          command: |
+            buf lint
+            buf breaking --against '.git#branch=main'
